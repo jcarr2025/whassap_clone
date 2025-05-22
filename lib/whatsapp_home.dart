@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whassappclone/pages/camera_alt.dart';
-import 'package:whassappclone/pages/chat_screen.dart';
+import 'package:whassappclone/pages/chat_list.dart';
 
 class WhatsAppHome extends StatefulWidget {
 
