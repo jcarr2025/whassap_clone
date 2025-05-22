@@ -20,9 +20,31 @@ class _ChatListState extends State<ChatList> {
           ),
           new ListTile(
             leading: new CircleAvatar(
-              backgroundImage:
-                  new NetworkImage(messageData[i].imageUrl.toString()),
+              backgroundImage: new NetworkImage(
+                messageData[i].imageUrl.toString(),
+              ),
             ),
+            title: new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                new Text(
+                  messageData[i].name.toString(),
+                  style: new TextStyle(fontWeight: FontWeight.bold),
+                ),
+                new Text(
+                  messageData[i].time.toString(),
+                  style: new TextStyle(color: Colors.grey, fontSize: 14.0),
+                ),
+              ],
+            ),
+            subtitle: new Container(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: new Text(
+                messageData[i].message.toString(),
+                style: new TextStyle(color: Colors.grey, fontSize: 15.0),
+              ),
+            ),
+
           ),
         ],
       ),
