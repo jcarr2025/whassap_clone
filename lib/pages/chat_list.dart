@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whassappclone/models/chat_model.dart';
 
+import 'chat_screen.dart';
+
 class ChatList extends StatefulWidget {
   const ChatList({super.key});
 
@@ -44,7 +46,12 @@ class _ChatListState extends State<ChatList> {
                 style: new TextStyle(color: Colors.grey, fontSize: 15.0),
               ),
             ),
-
+            onTap: () {
+              var route = new MaterialPageRoute(
+                builder: (BuildContext context) => new ChatScreen(),
+              );
+              Navigator.of(context).push(route);
+            },
           ),
         ],
       ),
